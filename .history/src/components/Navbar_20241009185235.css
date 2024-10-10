@@ -1,5 +1,5 @@
 .MuiAppBar-root {
-    background-color: rgb(192, 192, 192) !important;
+    background-color: navy !important;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -32,7 +32,7 @@
   }
 
   .MuiButton-root:hover {
-      color: navy;
+      color: goldenrod;
   }
 
 
