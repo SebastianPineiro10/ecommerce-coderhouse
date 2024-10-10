@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+//import logo from '../assets/img/logo.png';
 import CartWidget from '../components/Cartwidget';
 import "./Navbar.css";
 
@@ -41,7 +42,7 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <img 
-            src="https://res.cloudinary.com/dcerhiol0/image/upload/v1728523385/SP_Logo_Final_tdqkqs.png" 
+            src="https://res.cloudinary.com/dcerhiol0/image/upload/v1728523385/SP_Logo_Final_tdqkqs.png" // Asegúrate de que la URL sea correcta y accesible
             alt="Logo"
             style={{ height: '40px', marginRight: '10px' }} 
           />
