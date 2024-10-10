@@ -1,0 +1,78 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Estilos del AppBar (barra de navegación) */
+.MuiAppBar-root {
+  background-color: #2196f3; /* Color principal del AppBar */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.MuiTypography-h6, .MuiTypography-h5 {
+  font-weight: bold;
+}
+
+.MuiButtonBase-root {
+  font-size: 1rem;
+  text-transform: none; /* Evitar que el texto se convierta en mayúsculas */
+}
+
+.MuiToolbar-root {
+  padding: 0 20px;
+}
+
+/* Estilos de los botones de navegación */
+.MuiButton-root {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.MuiButton-root:hover {
+  background-color: #1976d2; /* Color al pasar el ratón por encima */
+}
+
+/* Estilos del logo */
+img {
+  max-height: 40px;
+}
+
+/* Estilos para el menú responsivo */
+.MuiIconButton-root {
+  color: white;
+}
+
+.MuiMenu-list {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.MuiMenuItem-root {
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: #e0e0e0;
+}
+
+/* Estilos para el avatar del usuario */
+.MuiAvatar-root {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff; /* Borde blanco para el avatar */
+}
+
+.MuiTooltip-tooltip {
+  font-size: 0.875rem;
+  background-color: #333;
+  color: white;
+}
+
+
+

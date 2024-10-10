@@ -1,0 +1,31 @@
+.MuiAppBar-root {
+    background-color: rgb(192, 192, 192) ;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1100;
+  }
+  
+  .MuiToolbar-root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    min-height: 64px;
+  }
+  
+  .MuiToolbar-regular {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Estilos de los botones de navegación */
+  .MuiButton-root {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+  }
+  

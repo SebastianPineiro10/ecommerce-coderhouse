@@ -1,4 +1,4 @@
-import NavBar from './components/NavBar'; 
+import NavBar from './components/NavBar'; // Asegúrate de que la ruta sea correcta
 import ItemListContainer from './components/ItemListContainer';
 
 
