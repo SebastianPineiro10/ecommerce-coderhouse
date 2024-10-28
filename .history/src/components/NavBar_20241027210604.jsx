@@ -11,19 +11,12 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import CartWidget from './common/cartWidget/Cartwidget';
-import { NavLink } from 'react-router-dom';
-import "./Navbar.css"; 
+import CartWidget from '../components/Cartwidget';
+import "./Navbar.css";
 
-const pages = [
-  { name: 'Inicio', route: '/' },
-  { name: 'Cubrebocas', route: '/category/cubrebocas' },
-  { name: 'Guantes de Nitrilo', route: '/category/guantes' },
-  { name: 'Batas Quirúrgicas', route: '/category/batas' },
-  { name: 'Material ortodoncia', route: '/category/ortodoncia'},
-  
-];
-const settings = ['Mi Perfil', 'Cuenta', 'Mis Compras', 'Cerrar sesión', 'Buscar'];
+
+const pages = [{name: 'Inicio', route: '/'}, {name: 'Cubrebocas', route: 'category/cubrebocas'},{name:  'Guantes de nitrilo', route:'category/guantes'},{name: 'Batas Quirurgicas', route:'category/batas'}];
+const settings = ['Mi Perfil', 'Cuenta', 'Mis Compras', 'Cerrar sesión','Buscar'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -32,7 +25,6 @@ function ResponsiveAppBar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -49,7 +41,7 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mr: 3.5 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mr: 3.5 }}>
             <img 
               src="https://res.cloudinary.com/dcerhiol0/image/upload/v1728523385/SP_Logo_Final_tdqkqs.png" 
               alt="Logo"
@@ -58,8 +50,8 @@ function ResponsiveAppBar() {
             <Typography
               variant="caption"
               noWrap
-              component={NavLink}
-              to="/"
+              component="a"
+              href="#app-bar-with-responsive-menu"
               sx={{
                 fontFamily: 'monospace',
                 fontWeight: 700,
@@ -72,7 +64,7 @@ function ResponsiveAppBar() {
             </Typography>
           </Box>
 
-          
+         
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'center', gap: 5 }}>
             <IconButton
               size="large"
@@ -87,39 +79,62 @@ function ResponsiveAppBar() {
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
               keepMounted
-              transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                    <NavLink to={page.route} style={{ textDecoration: 'none', color: 'inherit' }}>{page.name}</NavLink>
-                  </Typography>
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
 
           
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.2rem',
+              color: 'inherit',
+              textDecoration: 'none',
+              backgroundcolor: 'gray',
+            }}
+          >
+        
+          </Typography>
+
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page.name}
+                key={page}
                 onClick={handleCloseNavMenu}
-                component={NavLink}
-                to={page.route}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page.name}
+                {page}
               </Button>
             ))}
           </Box>
 
-          
+         
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Abrir ajustes">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -130,9 +145,15 @@ function ResponsiveAppBar() {
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
-              anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
               keepMounted
-              transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
@@ -151,4 +172,3 @@ function ResponsiveAppBar() {
 }
 
 export default ResponsiveAppBar;
-

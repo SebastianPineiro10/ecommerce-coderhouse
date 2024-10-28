@@ -11,17 +11,15 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import CartWidget from './common/cartWidget/Cartwidget';
+import CartWidget from '../components/Cartwidget';
 import { NavLink } from 'react-router-dom';
-import "./Navbar.css"; 
 
 const pages = [
   { name: 'Inicio', route: '/' },
   { name: 'Cubrebocas', route: '/category/cubrebocas' },
   { name: 'Guantes de Nitrilo', route: '/category/guantes' },
   { name: 'Batas Quirúrgicas', route: '/category/batas' },
-  { name: 'Material ortodoncia', route: '/category/ortodoncia'},
-  
+  // Añade más categorías aquí si es necesario
 ];
 const settings = ['Mi Perfil', 'Cuenta', 'Mis Compras', 'Cerrar sesión', 'Buscar'];
 
@@ -32,7 +30,6 @@ function ResponsiveAppBar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -58,8 +55,8 @@ function ResponsiveAppBar() {
             <Typography
               variant="caption"
               noWrap
-              component={NavLink}
-              to="/"
+              component="a"
+              href="/"
               sx={{
                 fontFamily: 'monospace',
                 fontWeight: 700,
@@ -72,7 +69,6 @@ function ResponsiveAppBar() {
             </Typography>
           </Box>
 
-          
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'center', gap: 5 }}>
             <IconButton
               size="large"
@@ -104,12 +100,11 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
 
-          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page.name}
-                onClick={handleCloseNavMenu}
+                color="inherit"
                 component={NavLink}
                 to={page.route}
                 sx={{ my: 2, color: 'white', display: 'block' }}
@@ -119,7 +114,6 @@ function ResponsiveAppBar() {
             ))}
           </Box>
 
-          
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Abrir ajustes">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

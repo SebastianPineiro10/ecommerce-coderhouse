@@ -11,17 +11,15 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import CartWidget from './common/cartWidget/Cartwidget';
+import CartWidget from '../components/Cartwidget';
 import { NavLink } from 'react-router-dom';
-import "./Navbar.css"; 
+//import "./Navbar.css"; // Asegúrate de que esta ruta sea correcta
 
 const pages = [
   { name: 'Inicio', route: '/' },
   { name: 'Cubrebocas', route: '/category/cubrebocas' },
   { name: 'Guantes de Nitrilo', route: '/category/guantes' },
-  { name: 'Batas Quirúrgicas', route: '/category/batas' },
-  { name: 'Material ortodoncia', route: '/category/ortodoncia'},
-  
+  { name: 'Batas Quirúrgicas', route: '/category/batas' }
 ];
 const settings = ['Mi Perfil', 'Cuenta', 'Mis Compras', 'Cerrar sesión', 'Buscar'];
 
@@ -49,6 +47,7 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          {/* Logo y título */}
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mr: 3.5 }}>
             <img 
               src="https://res.cloudinary.com/dcerhiol0/image/upload/v1728523385/SP_Logo_Final_tdqkqs.png" 
@@ -72,7 +71,7 @@ function ResponsiveAppBar() {
             </Typography>
           </Box>
 
-          
+          {/* Menú móvil */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'center', gap: 5 }}>
             <IconButton
               size="large"
@@ -104,7 +103,7 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
 
-          
+          {/* Menú de navegación para escritorio */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
@@ -119,7 +118,7 @@ function ResponsiveAppBar() {
             ))}
           </Box>
 
-          
+          {/* Menú de usuario */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Abrir ajustes">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

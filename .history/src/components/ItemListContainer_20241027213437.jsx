@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { products } from '../products';
+import { products } from '../data/products';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 

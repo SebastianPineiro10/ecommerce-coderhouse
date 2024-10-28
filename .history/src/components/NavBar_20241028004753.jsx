@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import CartWidget from './common/cartWidget/Cartwidget';
+import CartWidget from '../components/Cartwidget';
 import { NavLink } from 'react-router-dom';
 import "./Navbar.css"; 
 
@@ -72,7 +72,7 @@ function ResponsiveAppBar() {
             </Typography>
           </Box>
 
-          
+          {/* Menú móvil */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'center', gap: 5 }}>
             <IconButton
               size="large"
