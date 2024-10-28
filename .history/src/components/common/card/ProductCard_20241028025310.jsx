@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./productCard.css";
+import './ProductCard';
 
 export const ProductCard = ({ product }) => {
   return (
@@ -10,7 +10,7 @@ export const ProductCard = ({ product }) => {
       <p>Price: ${product.price}</p>
       <p>Stock: {product.stock}</p>
       <p>Category: {product.category}</p>
-      <Link to={`/itemDetail/${product.id}`}>
+      <Link to={`/item/${product.id}`}>
         <button>Ver detalle</button>
       </Link>
     </div>

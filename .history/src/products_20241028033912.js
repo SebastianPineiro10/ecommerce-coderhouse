@@ -1,7 +1,7 @@
 export let products = [
     {
       id: 1,
-      title: "Cubrebocas KN95",
+      title: "Cubrebocas",
       price: 50,
       description: "Cubrebocas desechables de alta protección.",
       imageUrl: "https://res.cloudinary.com/dcerhiol0/image/upload/v1728523385/SP_Logo_Final_tdqkqs.png",
