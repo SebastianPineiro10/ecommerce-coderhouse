@@ -53,7 +53,7 @@ function ResponsiveAppBar() {
             <img 
               src="https://res.cloudinary.com/dcerhiol0/image/upload/v1730231790/file_9_jmsjn0.png" 
               alt="Logo"
-              style={{ height: '150px', marginBottom: '1px', width: '150px' }} 
+              style={{ height: '100px', marginBottom: '5px', width: '100px' }} 
             />
             <Typography
               variant="caption"
@@ -68,7 +68,7 @@ function ResponsiveAppBar() {
                 textDecoration: 'none',
               }}
             >
-             
+              DEPOSITO DENTAL
             </Typography>
           </Box>
 
