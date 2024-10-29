@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { products } from '../../../products';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import '../../common/card/productcard.css';
 
 const ItemDetailContainer = () => {
   const { itemId } = useParams();
@@ -20,7 +21,8 @@ const ItemDetailContainer = () => {
           <Typography variant="h4">{item.title}</Typography>
           <Typography variant="body1">{item.description}</Typography>
           <Typography variant="body2">Precio: ${item.price}</Typography>
-          <img src={item.imageUrl} alt={item.title} style={{ maxWidth: '100%' }} />
+          <Typography variant="body2">Stock: {item.stock}</Typography>
+          {item.imageUrl && <img src={item.imageUrl} alt={item.title} className="detail-image" />}
         </>
       ) : (
         <Typography variant="h6">Cargando...</Typography>
@@ -30,3 +32,4 @@ const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer;
+

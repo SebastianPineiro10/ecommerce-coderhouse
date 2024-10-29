@@ -6,15 +6,21 @@ import ItemDetailContainer from './components/pages/ItemDetail/ItemDetailContain
 const App = () => {
   return (
     <BrowserRouter>
-      <NavBar /> 
+      <NavBar />
       <Routes>
-        <Route path="/" element={<ItemListContainer greeting="¡Hola! Bienvenido a SP Deposito Dental, tu proveedor de productos odontológicos de confianza." />} />
+        <Route 
+          path="/" 
+          element={<ItemListContainer greeting="¡Hola! Bienvenido a SP Deposito Dental, tu proveedor de productos odontológicos de confianza." />} 
+        />
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
         <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+        <Route path="*" element={<h2>404 not found</h2>} />
       </Routes>
     </BrowserRouter>
   );
 };
 
 export default App;
+
+
 

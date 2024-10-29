@@ -1,11 +1,10 @@
-import { Card } from "../../common/card/ProductCard";
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import ProductCard from '../../common/card/ProductCard';
 
 const ItemList = ({ items }) => {
   return (
     <Box sx={{ padding: 2 }}>
-      <Typography variant="h4" gutterBottom>Listado de productos</Typography>
+      <h3>Listado de productos</h3> 
       <Box
         sx={{
           display: "flex",
@@ -14,12 +13,11 @@ const ItemList = ({ items }) => {
           width: "100%",
         }}
       >
-        {items.map(({ id, title, price, stock, imageUrl }) => (
-          <Card
+        {items.map(({ id, title, price, imageUrl }) => (
+          <ProductCard
             key={id}
             title={title}
             price={price}
-            stock={stock}
             image={imageUrl}
             id={id}
           />
