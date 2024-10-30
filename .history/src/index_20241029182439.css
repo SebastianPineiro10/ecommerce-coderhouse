@@ -1,0 +1,16 @@
+body {
+  background-color: #F8F1E5; 
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #2C3E50; 
+}
+
+.item-list-container {
+  text-align: center; /* Si deseas centrar el contenido */
+}
+
+.greeting-text {
+  font-size: 18px;
+  color: white; /* Sin !important */
+  font-weight: bold;
+}

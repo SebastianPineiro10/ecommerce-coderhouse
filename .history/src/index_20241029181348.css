@@ -1,0 +1,13 @@
+body {
+  background-color: #F8F1E5; /* Fondo suave y cálido */
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333333; /* Gris oscuro para texto principal */
+}
+
+/* Texto de bienvenida o cualquier texto breve */
+.greeting-text {
+  font-size: 16px; /* Tamaño de fuente ligeramente mayor para mejor legibilidad */
+  color: #666666; /* Gris medio para un contraste más suave */
+  font-weight: 400; /* Regular para un aspecto limpio */
+}

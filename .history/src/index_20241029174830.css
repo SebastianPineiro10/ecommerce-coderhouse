@@ -1,0 +1,12 @@
+body {
+  background-color:  navy; 
+  margin: 0; 
+  font-family: Arial, sans-serif; 
+  color: white; 
+ 
+ 
+}
+.greeting-text {
+  font-size: 12px; 
+  color: white;
+}
