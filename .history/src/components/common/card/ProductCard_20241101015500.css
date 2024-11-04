@@ -1,0 +1,38 @@
+.product-card {
+  background-color: white; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+  margin: 20px; 
+  transition: transform 0.2s; 
+  width: 250px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: flex-start; 
+}
+
+.product-card:hover {
+  transform: scale(1.05); 
+}
+
+.product-card img {
+  width: 100%; 
+  height: auto; 
+  max-height: 160px; 
+  border-radius: 4px; 
+  object-fit: contain; 
+}
+
+.product-card h3, 
+.product-card p {
+  margin: 8px 0; 
+  text-align: center; 
+}
+.product-container {
+  display: flex; /* O usa display: grid; */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en nuevas filas */
+  justify-content: flex-start; /* Alinear al inicio */
+  gap: 20px; /* Espacio entre tarjetas */
+  padding: 20px; /* Espacio alrededor del contenedor */
+}

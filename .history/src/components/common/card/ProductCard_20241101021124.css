@@ -1,0 +1,44 @@
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2px; /* Espacio entre tarjetas */
+}
+
+.product-card {
+  background-color: white; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s; 
+  overflow: hidden;
+  display: flex; /* Usar Flexbox */
+  flex-direction: column; /* Colocar elementos en columna */
+  align-items: center; /* Centrar elementos */
+  justify-content: space-around;
+}
+
+.product-card:hover {
+  transform: scale(1.05); 
+}
+
+.product-card img {
+  width: 100%; 
+  height: auto; /* Mantener proporción */
+  max-height: 160px; /* Limitar la altura */
+  border-radius: 4px; 
+  object-fit: contain; /* Mantener proporción */
+}
+
+.product-card h6, 
+.product-card p {
+  margin: 20px ; /* Espaciado uniforme */
+  text-align: center; /* Alinear texto al centro */
+  padding: 20px;
+}
+
+.product-card button {
+  margin-top: 8px; 
+  width: 100%; /* Hacer que el botón ocupe todo el ancho */
+}
+
+

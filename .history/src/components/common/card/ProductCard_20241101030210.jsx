@@ -1,0 +1,35 @@
+import { Link } from "react-router-dom";
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+
+const ProductCard = ({ title, price, image, id }) => {
+  return (
+    <Box className="product-card" sx={{ border: '1px solid #ddd', borderRadius: '8px', padding: 2, textAlign: 'center' }}>
+      {image && (
+        <CardMedia
+          component="img"
+          src={image}
+          alt={title}
+          sx={{ width: '150px', height: '150px', margin: '0 auto', marginBottom: 2, borderRadius: '5px' }}
+        />
+      )}
+      <Typography variant="h6">{title || 'Título no disponible'}</Typography>
+      <Typography variant="body1">Precio: ${price}</Typography>
+      <Button
+        component={Link}
+        to={`/item/${id}`}  
+        variant="contained"
+        color="primary"
+        aria-label={`Ver detalles de ${title}`}
+        sx={{ marginTop: '8px' }}
+      >
+        Ver Detalles
+      </Button>
+    </Box>
+  );
+};
+
+export default ProductCard;
+
