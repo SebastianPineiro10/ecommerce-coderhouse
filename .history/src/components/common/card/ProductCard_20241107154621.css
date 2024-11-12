@@ -1,0 +1,82 @@
+
+/* Contenedor principal de las tarjetas */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsividad más flexible */
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Alineación central de las tarjetas */
+  padding: 20px; /* Espacio alrededor del contenedor */
+}
+
+/* Estilos para la tarjeta */
+.product-card {
+  background-color: white;
+  border-radius: 12px; /* Bordes más suaves */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave y elegante */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px; /* Espaciado interno más amplio */
+  height: 100%; /* Asegura que la tarjeta ocupe toda la altura disponible */
+  margin-bottom: 20px; /* Añadido espaciado inferior entre tarjetas */
+  box-sizing: border-box; /* Asegura que los márgenes internos no afecten el tamaño total */
+  position: relative; /* Para el efecto de sombra en hover */
+}
+
+/* Efecto hover para aumentar el tamaño y sombra */
+.product-card:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta al pasar el mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+/* Estilos para la imagen */
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 180px; /* Aumentado para una imagen más prominente */
+  border-radius: 8px; /* Bordes suaves */
+  object-fit: cover; /* Cubre el área de la imagen sin distorsión */
+  margin-bottom: 16px; /* Espacio debajo de la imagen */
+}
+
+/* Estilos para el título y el precio */
+.product-card h6, 
+.product-card p {
+  margin: 8px 0;
+  text-align: center; /* Alineación central */
+  font-size: 1.1rem; /* Tamaño de fuente más grande y elegante */
+  font-weight: 500; /* Peso más ligero para un diseño moderno */
+  color: #333; /* Color de texto más suave */
+}
+
+/* Estilo del botón */
+.product-card button {
+  padding: 12px;
+  width: 100%;
+  font-size: 1rem; /* Tamaño de fuente adecuado */
+  background-color: #007BFF; /* Color del botón más atractivo */
+  color: white;
+  border: none;
+  border-radius: 6px; /* Bordes redondeados */
+  font-weight: 600;
+  cursor: pointer; /* Aparece como un cursor de mano */
+  transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Efecto hover en el botón */
+.product-card button:hover {
+  background-color: #0056b3; /* Color de fondo más oscuro al hacer hover */
+}
+
+/* Estilo de los textos del precio, si es necesario */
+.product-card p {
+  color: #777; /* Color más suave para el precio */
+  font-size: 1rem;
+}
+
+
+
+

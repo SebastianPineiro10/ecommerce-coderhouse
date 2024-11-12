@@ -1,0 +1,99 @@
+/* Contenedor principal de las tarjetas */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ajuste responsivo */
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Alineación central */
+  padding: 20px;
+}
+
+/* Estilos para la tarjeta */
+.product-card {
+  background-color: white;
+  border-radius: 8px; /* Bordes sutiles */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.40); /* Sombra suave */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transición suave para sombra y tamaño */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Efecto hover con sombra más pronunciada y pequeño aumento de tamaño */
+.product-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+  transform: translateY(-1px); /* Eleva ligeramente la tarjeta */
+}
+
+/* Estilos para la imagen */
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  border-radius: 6px; /* Bordes suaves */
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+/* Estilo del título */
+.product-card h6 {
+  margin: 8px 0;
+  text-align: center;
+  font-size: 1.2rem; /* Tamaño adecuado para destacar el título */
+  font-weight: 600; /* Aumento de peso para más visibilidad */
+  color: #333; /* Color oscuro para buen contraste */
+}
+
+/* Estilo del precio */
+.product-card p {
+  color: #777; /* Color suave para el precio */
+  font-size: 1rem;
+  margin: 8px 0;
+  text-align: center;
+}
+
+/* Estilo del botón */
+.product-card button {
+  padding: 12px;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #007BFF; /* Azul confiable */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+/* Efecto hover en el botón */
+.product-card button:hover {
+  background-color: #0056b3; /* Azul más oscuro al hacer hover */
+}
+
+/* Asegura que el contenido dentro de la tarjeta esté alineado correctamente */
+.product-card .product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+/* Mejora del espaciado y alineación de los textos */
+.product-card h6,
+.product-card p {
+  margin: 8px 0;
+  font-family: 'Roboto', sans-serif; /* Fuente limpia y profesional */
+}
+
+
+
+
+

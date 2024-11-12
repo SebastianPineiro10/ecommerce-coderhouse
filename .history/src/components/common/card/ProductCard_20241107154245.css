@@ -1,0 +1,52 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Distribución responsiva */
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Alineación central de las tarjetas */
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Esto hace que los elementos dentro de la tarjeta se distribuyan bien */
+  padding: 16px; /* Espaciado interno para los elementos */
+  height: 100%; /* Asegura que la tarjeta ocupe toda la altura disponible */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Efecto hover para resaltar la tarjeta */
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  border-radius: 4px;
+  object-fit: contain; /* Ajusta la imagen dentro de su contenedor */
+}
+
+.product-card h6, 
+.product-card p {
+  margin: 8px 0;
+  text-align: center; /* Alinea el texto al centro */
+  font-size: 1rem; /* Tamaño de fuente consistente */
+}
+
+.product-card button {
+  padding: 10px;
+  width: 100%; /* Hace que el botón ocupe todo el ancho */
+  font-size: 0.9rem; /* Ajusta el tamaño de la fuente del botón */
+  margin-top: 12px; /* Espaciado superior para separar el botón del texto */
+  text-transform: none; /* No poner todo en mayúsculas */
+  font-weight: 500; /* Peso de fuente más suave */
+}
+
+
+
+
