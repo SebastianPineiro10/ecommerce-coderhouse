@@ -2,24 +2,28 @@ import { createContext, useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { toast } from "sonner";
 
-
+// Creación del contexto del carrito
 const CartContext = createContext();
 
-
+// Proveedor del contexto del carrito
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  
+  // Generar un ID único para cada entrada en el carrito
   const generateCartItemId = () => `cart-${Date.now()}-${Math.random()}`;
 
-  
-  const addToCart = (product) => {
-    const newCartItem = { ...product, cartItemId: generateCartItemId(), quantity: 1 };
+  // Función para agregar producto al carrito
+  const addToCart = (product, quantity = 1) => {
+    const newCartItem = {
+      ...product,
+      cartItemId: generateCartItemId(), // ID único para esta instancia
+      quantity,
+    };
     setCart((prevCart) => [...prevCart, newCartItem]);
     toast.success(`${product.title} ha sido añadido al carrito`);
   };
 
-  
+  // Función para eliminar producto del carrito usando cartItemId
   const removeFromCart = (cartItemId) => {
     setCart((prevCart) => {
       const updatedCart = prevCart.filter((item) => item.cartItemId !== cartItemId);
@@ -28,30 +32,39 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  
+  // Función para actualizar la cantidad de un producto usando cartItemId
   const updateQuantity = (cartItemId, quantity) => {
-    if (quantity < 1 || isNaN(quantity)) return; 
+    if (quantity < 1 || isNaN(quantity)) return; // Validación de cantidad mínima
     setCart((prevCart) => {
       const updatedCart = prevCart.map((item) =>
-        item.cartItemId === cartItemId ? { ...item, quantity: quantity } : item  
+        item.cartItemId === cartItemId ? { ...item, quantity } : item
       );
       toast.info("Cantidad actualizada");
       return updatedCart;
     });
   };
 
-  
+  // Función para obtener el total del carrito
   const getTotal = () => {
     return cart.reduce((total, item) => total + (item.price * item.quantity || 0), 0);
   };
 
-  
+  // Función para obtener la cantidad total de productos en el carrito
   const getTotalQuantity = () => {
     return cart.reduce((total, item) => total + (item.quantity || 0), 0);
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, getTotal, getTotalQuantity }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        getTotal,
+        getTotalQuantity,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
@@ -64,10 +77,6 @@ CartProvider.propTypes = {
 export const useCart = () => {
   return useContext(CartContext);
 };
-
-
-
-
 
 
 

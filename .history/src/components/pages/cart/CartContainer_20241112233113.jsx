@@ -5,23 +5,23 @@ import { Delete as DeleteIcon } from "@mui/icons-material";
 const CartContainer = () => {
   const { cart, removeFromCart, addToCart, getTotal, getTotalQuantity } = useCart();
 
-  
-  const handleRemoveFromCart = (prodId) => {
-    removeFromCart(prodId);
+  // Manejo de la eliminación de productos
+  const handleRemoveFromCart = (cartItemId) => {
+    removeFromCart(cartItemId);
   };
 
-  
-  const handleQuantityChange = (prodId, e) => {
+  // Manejo de la actualización de cantidades
+  const handleQuantityChange = (cartItemId, e) => {
     const newQuantity = parseInt(e.target.value, 10);
     if (newQuantity >= 1) {
-      const item = cart.find(i => i.cartItemId === prodId);
+      const item = cart.find(i => i.cartItemId === cartItemId);
       if (item) {
-        addToCart(item, newQuantity); 
+        addToCart(item, newQuantity); // Usamos addToCart para actualizar la cantidad
       }
     }
   };
 
-  
+  // Función para finalizar la compra
   const handleCheckout = () => {
     alert(`Total a pagar: $${getTotal().toFixed(2)} con ${getTotalQuantity()} productos`);
   };
@@ -32,14 +32,14 @@ const CartContainer = () => {
         Carrito de Compras
       </Typography>
 
-      
+      {/* Si el carrito está vacío */}
       {cart.length === 0 ? (
         <Typography variant="h6" sx={{ color: "gray" }}>
           Tu carrito está vacío.
         </Typography>
       ) : (
         <Grid container spacing={2}>
-          
+          {/* Mostrar cada producto del carrito */}
           {cart.map((product) => (
             <Grid item xs={12} md={6} key={product.cartItemId}>
               <Box
@@ -76,7 +76,7 @@ const CartContainer = () => {
                     ${product.price} x {product.quantity}
                   </Typography>
 
-                  
+                  {/* Input para cambiar la cantidad */}
                   <TextField
                     type="number"
                     value={product.quantity}
@@ -88,7 +88,7 @@ const CartContainer = () => {
                     }}
                   />
 
-                  
+                  {/* Botón para eliminar producto */}
                   <IconButton color="error" onClick={() => handleRemoveFromCart(product.cartItemId)}>
                     <DeleteIcon />
                   </IconButton>
@@ -99,7 +99,7 @@ const CartContainer = () => {
         </Grid>
       )}
 
-      
+      {/* Mostrar el total y la cantidad de productos */}
       <Box sx={{ display: "flex", justifyContent: "flex-end", marginTop: 3 }}>
         <Typography variant="h6" sx={{ marginRight: 2 }}>
           Total: ${getTotal().toFixed(2)}
@@ -109,7 +109,7 @@ const CartContainer = () => {
         </Typography>
       </Box>
 
-      
+      {/* Botón para finalizar la compra */}
       {cart.length > 0 && (
         <Box sx={{ marginTop: 2 }}>
           <Button

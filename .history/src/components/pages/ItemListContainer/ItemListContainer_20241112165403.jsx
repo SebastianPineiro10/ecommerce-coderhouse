@@ -10,7 +10,7 @@ import ItemList from "./ItemList";
 export const ItemListContainer = ({greeting}) => {
   const { categoryId } = useParams();
   const [items, setItems] = useState([]);
-  const [isAdmin] = useState(false); 
+  const [isAdmin, setIsAdmin] = useState(true); 
 
  
   useEffect(() => {
