@@ -19,12 +19,12 @@ const CartContainer = () => {
   };
 
   const handleCheckout = () => {
-    startCheckout(); 
-    navigate('/checkout'); 
+    startCheckout(); // Cambiar el estado a checkout
+    navigate('/checkout'); // Redirigir al formulario de compra
   };
 
   const handleGoToBrief = () => {
-    navigate('/brief'); 
+    navigate('/brief'); // Redirigir al resumen
   };
 
   return (

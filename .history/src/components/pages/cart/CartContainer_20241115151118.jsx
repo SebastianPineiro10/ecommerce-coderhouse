@@ -19,12 +19,12 @@ const CartContainer = () => {
   };
 
   const handleCheckout = () => {
-    startCheckout(); 
-    navigate('/checkout'); 
+    startCheckout(); // Cambiar el estado a checkout
+    navigate('/checkout'); // Redirigir al formulario de compra
   };
 
   const handleGoToBrief = () => {
-    navigate('/brief'); 
+    navigate('/brief'); // Redirigir al resumen
   };
 
   return (
@@ -88,7 +88,7 @@ const CartContainer = () => {
           <Button
             variant="contained"
             color="primary"
-            sx={{ padding: "12px", fontSize: "16px", width: "350px", marginRight: 4 }}
+            sx={{ padding: "12px", fontSize: "16px", width: "350px", marginRight: 2 }}
             onClick={handleGoToBrief}
           >
             Ver Resumen

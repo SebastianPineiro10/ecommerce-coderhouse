@@ -6,8 +6,6 @@ import {ItemListContainer} from './components/pages/ItemListContainer/ItemListCo
 import ItemDetailContainer from './components/pages/ItemDetail/ItemDetailContainer';
 import CartContainer from './components/pages/cart/CartContainer';
 import { Toaster } from 'sonner';
-import Checkout from './components/pages/checkout/Checkout';
-import Brief from './components/pages/brief/Brief';
 
 
 const App = () => {
@@ -25,7 +23,6 @@ const App = () => {
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartContainer />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="/brief" element={<Brief />} />
           <Route path="*" element={<h2>404 not found</h2>} />
         </Routes>
       </BrowserRouter>

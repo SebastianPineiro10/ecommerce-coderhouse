@@ -1,0 +1,91 @@
+/* Estilo para el contenedor principal (tarjeta) */
+.checkout-container {
+    display: flex;  /* Usamos Flexbox para organizar los elementos dentro del contenedor */
+    flex-direction: column;  /* Organiza los elementos de arriba hacia abajo */
+    justify-content: flex-start;  /* Alinea los elementos al principio (arriba) */
+    align-items: center;  /* Centra el contenido horizontalmente */
+    max-width: 450px;  /* Ancho máximo de la tarjeta */
+    margin: 50px auto;  /* Centrado horizontal y separación de los bordes de la página */
+    padding: 30px;  /* Relleno interno */
+    background-color: #ffffff;  /* Fondo blanco */
+    border-radius: 10px;  /* Bordes redondeados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);  /* Sombra suave para un efecto de profundidad */
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Efecto hover para la tarjeta */
+  .checkout-container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
+    transform: translateY(-1px);
+  }
+  
+  /* Título alineado a la izquierda */
+  h2 {
+    color: #333;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+    letter-spacing: 1px;
+    width: 100%;  /* Hace que el título ocupe todo el ancho del contenedor */
+  }
+  
+ 
+  .checkout-form {
+    display: flex;  
+    flex-direction: column; 
+    gap: 20px;  
+    width: 100%;  
+    align-items: center;  
+  }
+  
+ 
+  input {
+    padding: 12px 15px;  
+    border: 1px solid #ddd;
+    border-radius: 6px;  
+    font-size: 14px;
+    width: 100%;  
+    max-width: 400px;  
+    height: 40px;  
+    margin-bottom: 15px;  
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+
+  input:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+
+  button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;  
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+  }
+  
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    background-color: #003d80;
+    transform: translateY(2px);
+  }
+  
+  
+  
+  
+  
+  

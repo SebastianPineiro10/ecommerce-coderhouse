@@ -28,7 +28,7 @@ const ProductCard = ({ title, price, image, id }) => {
         Precio: ${price}
       </Typography>
       
-      
+      {/* Contenedor solo para el botón */}
       <div className="product-card-content">
         <Link to={`/item/${id}`} style={{ width: '100%' }}>
           <Button

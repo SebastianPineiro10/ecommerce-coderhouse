@@ -81,3 +81,18 @@ CartProvider.propTypes = {
 export const useCart = () => {
   return useContext(CartContext);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

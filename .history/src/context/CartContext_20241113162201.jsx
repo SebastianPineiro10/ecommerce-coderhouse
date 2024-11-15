@@ -25,10 +25,10 @@ export const CartProvider = ({ children }) => {
   };
 
   const updateQuantity = (cartItemId, quantity) => {
-    if (quantity < 1 || isNaN(quantity)) return;
+    if (quantity < 1 || isNaN(quantity)) return; 
     setCart((prevCart) => {
       const updatedCart = prevCart.map((item) =>
-        item.cartItemId === cartItemId ? { ...item, quantity: quantity } : item
+        item.cartItemId === cartItemId ? { ...item, quantity: quantity } : item  
       );
       toast.info("Cantidad actualizada");
       return updatedCart;
@@ -41,11 +41,6 @@ export const CartProvider = ({ children }) => {
 
   const getTotalQuantity = () => {
     return cart.reduce((total, item) => total + (item.quantity || 0), 0);
-  };
-
-  const clearCart = () => {
-    setCart([]); 
-    toast.success("Carrito vacío");
   };
 
   const startCheckout = () => {
@@ -64,7 +59,6 @@ export const CartProvider = ({ children }) => {
       updateQuantity,
       getTotal,
       getTotalQuantity,
-      clearCart,
       startCheckout,
       resetCheckout,
       isCheckout
@@ -81,3 +75,18 @@ CartProvider.propTypes = {
 export const useCart = () => {
   return useContext(CartContext);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

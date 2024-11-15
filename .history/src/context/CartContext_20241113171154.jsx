@@ -44,7 +44,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const clearCart = () => {
-    setCart([]); 
+    setCart([]); // Limpiar el carrito
     toast.success("Carrito vacío");
   };
 
@@ -81,3 +81,18 @@ CartProvider.propTypes = {
 export const useCart = () => {
   return useContext(CartContext);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

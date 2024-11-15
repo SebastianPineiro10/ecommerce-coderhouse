@@ -10,22 +10,24 @@
 .product-card {
   background-color: white;
   border-radius: 8px; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  height: auto; 
+  height: 100%;
   margin-bottom: 20px;
   box-sizing: border-box;
   position: relative;
-  transition: box-shadow 0.3s ease;  
 }
 
 
 .product-card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);  
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
+  transform: translateY(-0.5px); 
 }
 
 
@@ -40,12 +42,11 @@
 
 
 .product-card h6 {
-  margin: 12px 0; 
+  margin: 8px 0;
   text-align: center;
   font-size: 1.2rem; 
   font-weight: 600; 
-  color: #333;
-  line-height: 1.4;  
+  color: #333; 
 }
 
 
@@ -54,38 +55,31 @@
   font-size: 1rem;
   margin: 8px 0;
   text-align: center;
-  line-height: 1.5;  
 }
-
 
 .product-card-content {
-  width: auto; 
+  width: auto; /* No ocupar todo el ancho */
   display: flex;
-  justify-content: center; 
-  margin-top: 16px; 
-  position: relative;
-  z-index: 2;
+  justify-content: center; /* Centra el botón */
+  margin-top: 16px; /* Espaciado entre el contenido de la tarjeta y el botón */
 }
 
-
 .product-card-content button {
-  width: 100%;  
+  width: 100%;
   font-size: 1rem;
-  padding: 12px 20px; 
+  padding: 12px;
   border-radius: 6px;
   background-color: #007BFF;
   color: white;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  position: relative; 
-  z-index: 3; 
+  transition: background-color 0.3s ease;
 }
 
 
-.product-card-content button:hover {
-  background-color: #0056b3;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+
+.product-card button:hover {
+  background-color: #0056b3; 
 }
 
 
@@ -100,10 +94,9 @@
 
 .product-card h6,
 .product-card p {
-  margin: 8px 0;  
-  font-family: 'Roboto', sans-serif;  
+  margin: 8px 0;
+  font-family: 'Roboto', sans-serif; 
 }
-
 
 
 
