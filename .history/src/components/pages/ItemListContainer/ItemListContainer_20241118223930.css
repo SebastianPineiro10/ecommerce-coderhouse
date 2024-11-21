@@ -1,0 +1,26 @@
+/* Contenedor del cuadro de bienvenida (simula el banner debajo del navbar) */
+.welcome-title {
+    margin-top: 0; /* Se pega al navbar */
+     
+    background-color: #003366; /* Azul marino elegante */
+    color: white; /* Texto blanco */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    font-size: 1.8rem; /* Ajuste de tamaño para que sea más discreto */
+    text-align: center; /* Centrado */
+    font-weight: 300; /* Moderado para un texto destacado */
+    border-radius: 0; /* Sin bordes redondeados para que se vea como un banner recto */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para darle un toque de profundidad */
+    position: relative; /* Necesario para posicionar correctamente debajo del navbar */
+    /* Asegura que esté por encima de otros elementos */
+    
+  }
+  
+  /* Efecto de hover sutil, solo si quieres hacerlo más interactivo */
+  .welcome-title:hover {
+    /* Un azul más claro al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor para indicar interactividad */
+  }
+  
+  
+  

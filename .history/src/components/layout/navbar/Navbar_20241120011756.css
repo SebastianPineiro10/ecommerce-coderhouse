@@ -1,0 +1,45 @@
+.MuiAppBar-root {
+    background-color: rgb(192, 192, 192) !important;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    
+  }
+  
+  .MuiToolbar-root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    min-height: 64px;
+  }
+  
+  .MuiToolbar-regular {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+ 
+  .MuiButton-root {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 16px;
+    transition: background-color 0.3s ease;
+  
+  }
+
+  .MuiButton-root:hover {
+      color: navy;
+  }
+
+
+.MuiMenu-paper {
+    background-color:  rgb(192, 192, 192)!important; 
+    color: white !important;
+}
+
+
+

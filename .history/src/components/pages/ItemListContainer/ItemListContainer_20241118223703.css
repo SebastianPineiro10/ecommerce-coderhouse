@@ -1,0 +1,26 @@
+/* Contenedor del cuadro de bienvenida */
+.welcome-title {
+    margin-top: 0; /* Pegado al navbar */
+    padding: 15px 30px; /* Espaciado para que se vea cómodo */
+    background-color: #003366; /* Fondo azul marino elegante */
+    color: white; /* Texto blanco para alto contraste */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    font-size: 2rem; /* Tamaño adecuado para que se lea bien */
+    text-align: center; /* Centrado */
+    font-weight: 600; /* Peso moderado para que se vea sólido */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    transition: all 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  /* Efecto de hover para agregar interactividad */
+  .welcome-title:hover {
+    background-color: #00509d; /* Color azul más claro al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor al pasar encima */
+    transform: translateY(-2px); /* Efecto de elevación sutil */
+  }
+  
+  
+  
+  

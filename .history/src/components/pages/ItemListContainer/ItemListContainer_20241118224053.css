@@ -1,0 +1,23 @@
+.welcome-title {
+    position: fixed; /* Fijo para que siempre esté visible mientras se hace scroll */
+    top: 0; /* Pegado al top */
+    left: 0; /* Alineado a la izquierda */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: #003366; /* Azul marino */
+    color: white; /* Texto blanco */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    font-size: 1.6rem; /* Tamaño moderado para que no ocupe demasiado espacio */
+    text-align: center; /* Centrado */
+    font-weight: 600; /* Moderado para un texto destacado */
+    padding: 12px 0; /* Espaciado vertical moderado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera para profundidad */
+    z-index: 1000; /* Asegura que se quede encima de otros elementos */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  .welcome-title:hover {
+    background-color: #00509d; /* Un azul más brillante al pasar el mouse */
+    cursor: pointer; /* Cambiar cursor para dar la sensación de interactividad */
+  }
+  
+  

@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Incluye padding y borde en las dimensiones totales */
+}
+
+/* Otros estilos globales */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F8F1E5;
+  color: #2C3E50;
+}

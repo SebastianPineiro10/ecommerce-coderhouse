@@ -1,0 +1,23 @@
+.welcome-title {
+    position: absolute; /* Asegura que se quede debajo del navbar, no fijo */
+    top: 150px; /* Ajusta para que quede justo debajo del navbar */
+    left: 0;
+    width: 100px; /* Ocupa todo el ancho de la pantalla */
+    background-color: #003366; /* Azul marino */
+    color: white; /* Texto blanco */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    font-size: 1.4rem; /* Tamaño moderado */
+    text-align: center; /* Centrado */
+    font-weight: 20; /* Peso de la fuente moderado */
+    padding: 10px 0; /* Espaciado vertical más discreto */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  .welcome-title:hover {
+    background-color: #00509d; /* Un azul más brillante al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor para indicar interactividad */
+  }
+  
+  

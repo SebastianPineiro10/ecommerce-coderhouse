@@ -1,0 +1,28 @@
+/* Contenedor general del cuadro de bienvenida */
+.welcome-title {
+    margin-top: 0; /* Elimina el margen superior para pegarlo al navbar */
+    padding: 15px; /* Reduce el padding para hacerlo más compacto */
+    background-color: #f1f1f1; /* Fondo gris claro para no llamar mucho la atención */
+    color: #333; /* Texto gris oscuro para una mejor legibilidad */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    font-size: 2rem; /* Tamaño de texto moderado */
+    text-align: center; /* Centrado del texto */
+    font-weight: 500; /* Peso de fuente normal */
+    text-shadow: none; /* Eliminamos la sombra del texto */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: none; /* Sin sombra para un look más limpio */
+    border: none; /* Sin borde */
+    width: 100%; /* Se adapta al ancho de su contenedor */
+    display: block; /* Se asegura de que ocupe el 100% del ancho */
+    position: relative;
+    top: 0; /* Alineación con el navbar */
+  }
+  
+  /* Opcional: Añadir un pequeño efecto hover si quieres que reaccione */
+  .welcome-title:hover {
+    background-color: #e0e0e0; /* Color ligeramente más oscuro al pasar el ratón */
+    color: #222; /* Oscurece un poco el texto */
+  }
+  
+  
+  

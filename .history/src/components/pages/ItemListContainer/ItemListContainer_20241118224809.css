@@ -1,0 +1,24 @@
+.greeting-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #1e88e5;
+  }
+  
+  .greeting-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1e88e5;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  
