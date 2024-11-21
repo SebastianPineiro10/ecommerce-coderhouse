@@ -6,7 +6,7 @@ import { collection, getDocs, query, where, addDoc, updateDoc, doc } from "fireb
 import { db } from "../../../firebaseConfig";
 import { products } from "../../../products"; 
 import ItemList from "./ItemList";
-import "./itemlistcontainer.css";
+import "../../../components/pages/ItemListContainer/itemlistcontainer.css";
 
 export const ItemListContainer = ({greeting}) => {
   const { categoryId } = useParams();
