@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'; 
 import { Box, Typography, Button, CardMedia } from '@mui/material';
 import { Link } from 'react-router-dom';
-import "./ProductCard.css";
+import './ProductCard.css';
 
 const ProductCard = ({ title, price, image, id,}) => {
   return (
