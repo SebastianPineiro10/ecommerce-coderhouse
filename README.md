@@ -1,6 +1,6 @@
 # Ecommerce Coderhouse
 
-Este proyecto es un sistema de comercio electrónico desarrollado por **Sebastián Piñeiro Madero** como parte de un curso de desarrollo web. El objetivo es ofrecer un catálogo de productos conectado a Firebase para simular un entorno básico de e-commerce.
+Este proyecto es un sistema de comercio electrónico desarrollado por **Sebastián Piñeiro Madero** como parte de un curso de React Js. El objetivo es ofrecer un catálogo de productos conectado a Firebase para simular un entorno básico de e-commerce.
 
 🌐 **[Visita la aplicación en vivo aquí](https://ecommerce-coderhouse-blue.vercel.app/)**
 
