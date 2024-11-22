@@ -1,35 +1,33 @@
 # Ecommerce Coderhouse
 
-Este proyecto es una aplicación de comercio electrónico desarrollada por **Sebastián Piñeiro Madero** como parte del curso de desarrollo web en Coderhouse. La aplicación utiliza Firebase como backend y fue desplegada con Vercel para proporcionar una experiencia profesional y funcional para los usuarios.
+Este proyecto es un sistema de comercio electrónico desarrollado por **Sebastián Piñeiro Madero** como parte de un curso de desarrollo web. El objetivo es ofrecer un catálogo de productos conectado a Firebase para simular un entorno básico de e-commerce.
 
 🌐 **[Visita la aplicación en vivo aquí](https://ecommerce-coderhouse-blue.vercel.app/)**
 
 ---
 
-## 🚀 Características
+## 🚀 Funcionalidades
 
-- **Navegación responsiva:** Incluye secciones como Inicio, Productos, Acerca de nosotros y Contáctanos.
-- **Catálogo de productos dinámico:** Los datos son gestionados en tiempo real mediante **Firebase Firestore**.
-- **Carrito de compras funcional:** Sistema para agregar y eliminar productos, con actualización en tiempo real.
-- **Estilización moderna:** Diseño implementado con **Material-UI** y estilos personalizados con CSS.
-- **Despliegue eficiente:** El proyecto está alojado en **Vercel**, garantizando alta disponibilidad y rendimiento.
+- **Catálogo dinámico de productos:** Los datos se obtienen de Firebase Firestore.
+- **Carrito de compras:** Permite agregar productos seleccionados para simular un flujo de compra.
+- **Diseño responsivo:** Adaptado a dispositivos móviles y de escritorio utilizando Material-UI.
+- **Navbar interactivo:** Incluye navegación por las secciones principales del sitio.
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
 
-- **Frontend:**
-  - React.js
-  - JavaScript (ES6+)
-  - Material-UI
-  - CSS
+### **Frontend**
+- React.js
+- Vite
+- Material-UI
+- CSS
 
-- **Backend:**
-  - **Firebase Firestore:** Base de datos en tiempo real para almacenar y gestionar los productos.
-  - **Firebase Hosting:** Para almacenamiento de datos y recursos.
+### **Backend**
+- Firebase Firestore (base de datos)
 
-- **Despliegue:**
-  - **Vercel:** Usado para el lanzamiento y la puesta en producción de la aplicación.
+### **Despliegue**
+- Vercel
 
 ---
 
@@ -37,10 +35,12 @@ Este proyecto es una aplicación de comercio electrónico desarrollada por **Seb
 
 ```plaintext
 src/
-├── components/           # Componentes reutilizables (Navbar, ItemListContainer, CartWidget, etc.)
-├── assets/               # Archivos estáticos (logos, imágenes, etc.)
-├── styles/               # Archivos CSS personalizados
-├── utils/                # Configuración de Firebase y funciones auxiliares
-├── App.jsx               # Componente principal
-├── index.js              # Punto de entrada del proyecto
-
+├── assets/               # Recursos estáticos como imágenes
+├── components/           # Componentes reutilizables como Navbar, CartWidget, etc.
+│   ├── Navbar.jsx        # Barra de navegación
+│   ├── ItemListContainer.jsx  # Contenedor para productos
+│   └── CartWidget.jsx    # Ícono del carrito
+├── firebase/             # Configuración de Firebase
+│   └── firebaseConfig.js # Credenciales y conexión a Firestore
+├── App.jsx               # Componente raíz
+└── main.jsx              # Punto de entrada principal
